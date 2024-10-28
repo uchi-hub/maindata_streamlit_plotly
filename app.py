@@ -29,7 +29,7 @@ df4 = load_csv('diffavg_6w.csv')
 df5 = load_csv('diffavg_7.csv')
 
 # タイトルを表示
-st.title('地震発生日からの為替レートの変動')
+st.title('地震発生日からの為替レートの変動　米ドル/円')
 
 # データの更新
 if st.button("最新のデータに更新"):
