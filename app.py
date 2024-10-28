@@ -49,7 +49,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["震度5弱", "震度5強", "震度6弱"
 def render_chart(df, label):
     if df.empty:
         st.error(f"{label}のデータがありません。")
-    elif "経過日数" not in df.columns or "前日比" not in df.columns:
+    elif "経過日数" not in df.columns or "為替変動率" not in df.columns:
         st.error(f"{label}のデータ形式が正しくありません。")
     else:
         chart = alt.Chart(df).mark_line().encode(
