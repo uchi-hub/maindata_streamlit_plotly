@@ -10,10 +10,10 @@ def load_csv(file_path):
         
         # データが1列だけの場合、インデックスを「時間」として追加
         if df.shape[1] == 1:
-            df.columns = ["前日比"]
+            df.columns = ["為替変動率"]
             df["経過日数"] = range(len(df))  # 0, 1, 2,...と時間を追加
         elif df.shape[1] == 2:
-            df.columns = ["経過日数", "前日比"]
+            df.columns = ["経過日数", "為替変動率"]
         else:
             st.warning(f"{file_path}のデータ形式が正しくありません（列数: {df.shape[1]}）。")
         return df
@@ -54,7 +54,7 @@ def render_chart(df, label):
     else:
         chart = alt.Chart(df).mark_line().encode(
             x=alt.X('経過日数', title='経過日数'),
-            y=alt.Y('前日比', title='前日比')
+            y=alt.Y('為替変動率', title='為替変動率')
         )
         st.altair_chart(chart, use_container_width=True)
 
