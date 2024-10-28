@@ -22,16 +22,11 @@ def load_csv(file_path):
         return pd.DataFrame()  # 空のデータフレームを返す
 
 # 各CSVファイルを読み込む
-# df1 = load_csv('diffavg_5w.csv')
-# df2 = load_csv('diffavg_5s.csv')
-# df3 = load_csv('diffavg_6s.csv')
-# df4 = load_csv('diffavg_6w.csv')
-# df5 = load_csv('diffavg_7.csv')
-df1 = None
-df2 = None
-df3 = None
-df4 = None
-df5 = None
+df1 = load_csv('diffavg_5w.csv')
+df2 = load_csv('diffavg_5s.csv')
+df3 = load_csv('diffavg_6s.csv')
+df4 = load_csv('diffavg_6w.csv')
+df5 = load_csv('diffavg_7.csv')
 
 # タイトルを表示
 st.title('地震発生日からの為替レートの変動　米ドル/円')
