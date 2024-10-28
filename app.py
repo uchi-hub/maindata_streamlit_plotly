@@ -34,7 +34,7 @@ st.title('地震発生日からの為替レートの変動　米ドル/円')
 # データの更新
 if st.button("最新のデータに更新"):
     st.info("CSVファイルのダウンロード待機中...")
-    wait_for_getting_csv("diffavg")
+    wait_for_getting_csv("nucit/project/gp4/diffavg")
     df1 = load_csv('diffavg_5w.csv')
     df2 = load_csv('diffavg_5s.csv')
     df3 = load_csv('diffavg_6s.csv')
