@@ -1,1 +1,1 @@
-# maindata_streamlit_plotly
+# 地震と為替の関係
